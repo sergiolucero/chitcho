@@ -1,1 +1,0 @@
-fichas clínicas preprocesadas
