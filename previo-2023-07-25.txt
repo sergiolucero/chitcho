@@ -1,0 +1,101 @@
+FICHAS\ficha_18_07_2023_71579.html
+ El Dr. Chana Cuevas realizó una consulta el 25/04/2023 para un paciente con parkinsonismo. 
+ El plan de medicación incluye suspender Elbrus por 7 días y disminuir la dosis de Prolopa en 7 días. 
+ El paciente presenta trastornos de la marcha, problemas de equilibrio y caídas coincidentes con PA muy bajas. 
+ El plan incluye suspender Elbrus y disminuir la dosis de Prolopa, entregar una hoja de hipotensión ortostática y control.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71580.html
+ El Dr. Chana Cuevas realizó una consulta para una paciente con Enfermedad de Parkinson (G20) con antecedentes médicos variados. 
+ Se recetaron Prolopa 200/50, Pramiopexol, Sertralina y Bisoprolol. 
+ El plan fue estudio cognitivo, aumento de Prolopa y control en 3 meses.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71583.html
+ El Dr. Chana Cuevas realizó una consulta el 28/03/2023 para un paciente venezolano de 58 años con antecedentes de 
+ un padre con enfermedad de Alzheimer. El paciente presentaba temblor en la mano izquierda desde septiembre 2021, 
+ después de recibir la vacuna COVID con Astrazeneca. El diagnóstico fue parkinsonismo y se recetó 
+ Levodopa/Benserazida 200/50 mg (Prolopa) 1/2 comprimido 3 veces al día. 
+ Se realizaron exámenes de RM de cerebro con contraste y PET PR04. 
+ El plan de tratamiento incluye kinesioterapia motora, información para el paciente y su familiar, 
+	preguntar sobre el estado de ánimo en el próximo control y control en 2 meses o SOS.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71600.html
+ El Dr. Chana Cuevas realizó una consulta el 21/03/2023 a un paciente con Enfermedad de Parkinson Avanzada. 
+ El paciente presentaba fluctuación motora, corea y distonía bifásicas, acinesia nocturna y matinal, dolor en off, 
+ freezing de inicio de marcha, sd bradicinético rígido mayor a izq, no tembloroso. 
+ El tratamiento incluye alimentación saludable, ejercicio, terapia kinésica, terapia de estimulación neurocognitiva, 
+ medicación y control en 3 meses, así como vitamina B12 e ácido fólico. Se programó un control.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71626.html
+Dr. Chana Cuevas realizó una consulta el 27/01/2023 con Luz Novoa, una mujer de 58 años con diagnóstico de Enfermedad de Parkinson. 
+El plan de tratamiento incluye kinesioterapia motora, medicamentos y control en 6 meses. 
+Los síntomas incluyen temblor, micrografia, distonias, caídas, freezing, hiposmia, ortostatismo, deposiciones, diuresis, 
+	conducta sin obsesiones, alucinaciones y ejercicio físico.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71628.html
+ El Dr. Chana Cuevas realizó una consulta el 09/05/2023 con el paciente Julio Diaz Acosta, 
+ quien tiene diagnóstico de enfermedad de Parkinson idiopática, HPB y angiodisplasia. 
+ El paciente vive solo en Puerto Varas, es jubilado y trabaja dos veces a la semana. 
+ El tratamiento farmacológico incluye Prolopa, Biopsol, Lexapro, Espasmex, Duodart, 
+ Clonazepam, Quetiapina, Lansoprazol y Losartan. El paciente presenta movilidad reducida, 
+ requiere ayuda técnica para caminar y asistencia de cuidadora. 
+ El plan de tratamiento incluye aumentar la actividad física, cambiar Lexapro a 20mg en la mañana, 
+ tomar Dulcolax y seguimiento en 6 meses.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71647.html
+ El Dr. Chana Cuevas realizó una consulta para un paciente de 42 años con hipotiroidismo y alergia a camarones. 
+ El diagnóstico fue parkinsonismo, con temblor de pierna y brazo izquierdo, knt y fisioterapia. 
+ El paciente presentó síntomas como olfato normal, habla dormida ocasional, 
+ constipación no, urinario normal, memoria normal, ansiedad y ánimo bajo. 
+ La evaluación mostró oculomotilidad normal, bradiquinesia a izquierda, disminución de braceo a izquierdo, 
+ temblor de reposo y postural a izquierda, con componente mioclonico. El plan de tratamiento es PET PRO4 y Test genético.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71652.html
+ Loreto, a 25-year-old patient, suffered a hemorrhagic stroke at age 13, resulting in left hemiparesis. 
+ She is taking medication for her symptoms, which include tremor, bradykinesia, and rigidity. 
+ An MRI revealed a lesion in the right peduncle and a tumor in the right thalamus and peduncle, 
+ and she has been referred to neurosurgery for further evaluation.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71657.html
+ El Dr. Chana Cuevas, Pedro Francisco realizó dos consultas para tratar la enfermedad de Parkinson. 
+ En la primera consulta, el paciente presentaba trastornos conductuales irritables, trastornos del sueño insomnio 
+ y estaba tomando medicamentos. En la segunda consulta, el paciente fue ingresado a un estudio Large PD, 
+ se realizó Moca, extracción sanguínea e ingreso de datos a plataforma. 
+ El tratamiento recomendado fue psicoeducación sobre la enfermedad, medicamentos, y suspender el Triexifenidilo. 
+ Además, se recomendó Pramipexol (Sifrol).
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71658.html
+ El Dr. Chana Cuevas realizó dos consultas con una paciente de 74 años. 
+ La primera consulta incluyó una RNM cerebro con resultados de exámenes, antecedentes médicos, medicamentos, 
+ alergias, historia clínica y antecedentes familiares. 
+ La segunda consulta incluyó un examen físico, MOCA, historia clínica y un plan de derivación a un hospital 
+ para un tap test y una eventual derivación VP. La hija de la paciente informa que la paciente presenta temblor 
+ cefálico tipo “si-si”. Al examen físico, la paciente presenta lenguaje fluente, nomina, repite, 
+ obedece órdenes simples y complejas, gnosias y praxias conservadas, oculomotilidad conservada, 
+ campo visual sin alteraciones, sin asimetría facial, resto de pares bajos conservados, debilidad de hemicuerpo
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71661.html
+ El Dr. Chana Cuevas, Pedro Francisco realizó una consulta el 09/08/2021 para un paciente con enfermedad de Parkinson desde 2010. 
+ El paciente ha experimentado un aumento de los síntomas desde hace 4 meses, incluyendo babeo, menos expresividad facial, 
+ lentitud general, torpeza motora, depresión, irritabilidad y dificultades de memoria. 
+ El paciente también tiene problemas para mantener el sueño, constipación y dificultad para tragar. 
+ El doctor ha solicitado una ficha.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71662.html
+ El Dr. Chana Cuevas realizó una consulta para un paciente con enfermedad de Parkinson. 
+ Se le recetaron medicamentos, se recomendó terapia de rehabilitación, estudios de laboratorio, 
+ una RM encefálico con gadolineo, un ecografía vesical, un holter de presión arterial y una evaluación con el neurólogo. 
+ Se recomendó mantener la terapia de DM2 y Setralina 50 mg. El paciente debe controlarse en CETRAM.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71663.html
+ El Dr. Chana Cuevas, Pedro Francisco realizó una consulta para un paciente de 60 años con 
+ Enfermedad de Parkinson de aproximadamente 3-4 años de evolución. El paciente tiene antecedentes de hipertensión, 
+ hipercolesterolemia, alergias al pasto y al polvo. 
+ El tratamiento incluye medicamentos como Prolopa, Rasagilina, Vit D, ATV, Amlodipino y Cialis. 
+ El paciente se mantiene estable, sin fluctuaciones motoras ni dk. 
+ El Dr. Andrighetti, Soledad también realizó una consulta para el paciente el 16/08/2021.
+--------------------------------------------------------------------------------
+FICHAS\ficha_18_07_2023_71664.html
+ El Dr. Chana Cuevas realizó una consulta para un paciente de 81 años con demencia por cuerpos de Lewy. 
+ Se realizaron pruebas diagnósticas y se recetaron medicamentos para tratar los síntomas. 
+ El plan de tratamiento incluye alimentación saludable, ejercicio físico, medicamentos, terapia ocupacional, 
+ fonoaudiología, y control en 3 meses por Telemedicina.

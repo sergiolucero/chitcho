@@ -1,0 +1,6 @@
+boto3
+langchain
+openai
+streamlit
+streamlit-audiorecorder
+tiktoken

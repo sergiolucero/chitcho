@@ -1,0 +1,26 @@
+[LLMs]
+Offline GPT4?   https://gpt4all.io/index.html
+Finetune LLaMa2: https://towardsdatascience.com/fine-tune-your-own-llama-2-model-in-a-colab-notebook-df9823a04a32
+Faiss+LangChain  https://medium.com/@murtuza753/using-llama-2-0-faiss-and-langchain-for-question-answering-on-your-own-data-682241488476
+
+[Whisper]
+Diarization:    https://towardsdatascience.com/unlock-the-power-of-audio-data-advanced-transcription-and-diarization-with-whisper-whisperx-and-ed9424307281
+
+[LangChain]
+Summarization:  https://python.langchain.com/docs/use_cases/summarization
+IDEM:           https://blog.futuresmart.ai/summarizing-documents-made-easy-with-langchain-summarizer
+LangBOT:        https://betterprogramming.pub/building-a-multi-document-reader-and-chatbot-with-langchain-and-chatgpt-d1864d47e339
+
+[PINECONE]
+PDF_Loader:  https://medium.com/@rubentak/talk-to-your-pdf-files-in-a-pinecone-vector-databases-with-gpt-4-a-step-by-step-tutorial-1632cf7aa041
+
+[OpenAI]
+GORILLA:   https://colab.research.google.com/drive/1DEBPsccVLF_aUnmD0FwPeHFrtdC0QIUP?usp=sharing
+FineTuning: https://platform.openai.com/docs/guides/fine-tuning
+FT2:        https://www.datacamp.com/tutorial/fine-tuning-gpt-3-using-the-open-ai-api-and-python
+
+[ParkVox]
+HTK features: https://github.com/danijel3/PyHTK/blob/master/python-notebooks/HTKFeaturesExplained.ipynb
+ROC Curve: https://janakiev.com/blog/pytorch-iris/
+PyGWalker: https://python.plainenglish.io/walkthrough-data-with-pygwalker-predict-parkinsons-progression-62d505d8f3f6
+SHAP: https://towardsdatascience.com/shap-explain-any-machine-learning-model-in-python-72f0bea35f7c
