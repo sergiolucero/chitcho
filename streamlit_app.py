@@ -1,7 +1,7 @@
 import streamlit as st
 ##############################################
 st.set_page_config(page_title='Hable con Allende', layout='wide')
-st.markdown("<h1 style='text-align: center; color: red;'>11+50: hable con Allende</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: blue;'>11+50: hable con Allende</h3>", unsafe_allow_html=True)
 
 #tab1, tab2 = st.tabs(['Allende','Rettig'])
 col1, col2, col3 = st.columns([1,10,1])
