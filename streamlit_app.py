@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 #tab1, tab2 = st.tabs(['Allende','Rettig'])
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1,10,1])
 
 with col1:
     st.write(' ')
