@@ -7,7 +7,7 @@ from langchain.llms.openai import OpenAI
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 
 def get_response(query):
-    llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="text-davinci-003"))
+    llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="text-davinci-004"))
 
     max_input_size = 8192
     num_output = 256
