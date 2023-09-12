@@ -1,7 +1,7 @@
 import os, streamlit as st
 import time
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
-from llama_index.llms import OpenAI   # was langchain.llms.openai
+from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
 
 # Uncomment to specify your OpenAI API key here, or add corresponding environment variable (recommended)
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
