@@ -2,10 +2,10 @@ import os, streamlit as st
 import time
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
 from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
-
-# Uncomment to specify your OpenAI API key here, or add corresponding environment variable (recommended)
+#######################################
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
-
+max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirpath = './docs'
+#######################################
 @st.cache_resource(show_spinner=False)
 def get_index(idx_file = 'index.pkl'):
     if os.path.exists(idx_file):
@@ -24,9 +24,6 @@ def get_index(idx_file = 'index.pkl'):
     return index
     
 def get_response(query):
-
-    max_input_size = 8192;     num_output = 256
-    max_chunk_overlap = 20;    dirpath = './docs'
     t0 = time.time()
     index = get_index()    
     response = index.query(query)
