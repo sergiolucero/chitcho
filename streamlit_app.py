@@ -43,3 +43,5 @@ if st.button("Pregunte"):
             get_response(query)
         except Exception as e:
             st.error(f"An error occurred: {e}")
+            
+st.write('creado en septiembre 2023 por Sergio Lucero')
