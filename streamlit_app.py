@@ -7,7 +7,7 @@ from langchain.llms.openai import OpenAI   # could be llama_index.llms  but mayb
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 
 @st.cache_resource(show_spinner=False)
-def get_index():
+def get_index(idx_file = 'index.pkl'):
     if os.path.exists(idx_file):
         index = GPTSimpleVectorIndex.load_from_disk(idx_file)
     else:
@@ -26,7 +26,7 @@ def get_index():
 def get_response(query):
 
     max_input_size = 8192;     num_output = 256
-    max_chunk_overlap = 20;    dirpath = './docs'; idx_file = 'index.pkl'
+    max_chunk_overlap = 20;    dirpath = './docs'
     t0 = time.time()
     index = get_index()    
     response = index.query(query)
