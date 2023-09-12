@@ -28,6 +28,7 @@ def get_response(query):
 
 # Define a simple Streamlit app
 st.title("Chat con Chicho")
+st.image('Allende50.jfif')
 query = st.text_input("Pregúntele al Doctor Allende", "")
 
 # If the 'Submit' button is clicked
