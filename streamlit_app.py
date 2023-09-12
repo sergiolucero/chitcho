@@ -6,22 +6,29 @@ from langchain.llms.openai import OpenAI
 # Uncomment to specify your OpenAI API key here, or add corresponding environment variable (recommended)
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 
-def get_response(query):
-
-    max_input_size = 8192;     num_output = 256
-    max_chunk_overlap = 20;    dirpath = './docs'; idx_file = 'index.pkl'
-    t0 = time.time()
+@st.cache_resource(show_spinner=False)
+def get_index():
     if os.path.exists(idx_file):
         index = GPTSimpleVectorIndex.load_from_disk(idx_file)
     else:
         llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
         prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
         documents = SimpleDirectoryReader(dirpath).load_data()
-        service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, prompt_helper=prompt_helper)
+        prompt = "Contesta como Salvador Allende, el autor de los discursos"
+        service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, 
+                                                       prompt_helper=prompt_helper,
+                                                       system_prompt=prompt)
         
         index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
         index.save_to_disk(idx_file)
-            
+    return index
+    
+def get_response(query):
+
+    max_input_size = 8192;     num_output = 256
+    max_chunk_overlap = 20;    dirpath = './docs'; idx_file = 'index.pkl'
+    t0 = time.time()
+    index = get_index()    
     response = index.query(query)
     if response is None:
         st.error("Oops! No result found")
