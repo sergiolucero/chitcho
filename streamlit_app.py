@@ -27,7 +27,7 @@ def get_response(query):
         st.error("Oops! No result found")
     else:
         dt = round(time.time()-t0,2)
-        tdt = f'[DT: {tdt} secs'
+        tdt = f'[DT: {dt} secs]'
         st.success(response + tdt)
 ##################################################################
 st.title("Chat con Chicho")
