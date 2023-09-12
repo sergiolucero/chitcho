@@ -14,24 +14,27 @@ def get_response(query):
     max_chunk_overlap = 20
     dirpath = './docs'
     prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
-
-    if True: 
-        documents = SimpleDirectoryReader(dirpath).load_data()
-        service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, prompt_helper=prompt_helper)
+    idx_file = 'index.pkl'
+    
+    documents = SimpleDirectoryReader(dirpath).load_data()
+    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, prompt_helper=prompt_helper)
+    
+    if os.path.exists(idx_file):
+        index = GPTSimpleVectorIndex.load_from_disk(idx_file)
+    else:
         index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
-        
-        response = index.query(query)
-        if response is None:
-            st.error("Oops! No result found")
-        else:
-            st.success(response)
-
-# Define a simple Streamlit app
+        index.save_to_disk(idx_file)
+            
+    response = index.query(query)
+    if response is None:
+        st.error("Oops! No result found")
+    else:
+        st.success(response)
+##################################################################
 st.title("Chat con Chicho")
 st.image('Allende50.jfif', width=200)
 query = st.text_input("Pregúntele al Doctor Allende", "")
 
-# If the 'Submit' button is clicked
 if st.button("Pregunte"):
     if not query.strip():
         st.error(f"Please provide the search query.")
