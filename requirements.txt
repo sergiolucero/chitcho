@@ -1,6 +1,4 @@
-boto3
 langchain
+llama-index
 openai
 streamlit
-streamlit-audiorecorder
-tiktoken
