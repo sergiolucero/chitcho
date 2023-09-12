@@ -1,7 +1,7 @@
 import os, streamlit as st
 import time
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
-from langchain.llms.openai import OpenAI
+from llama_index.llms import OpenAI   # was langchain.llms.openai
 
 # Uncomment to specify your OpenAI API key here, or add corresponding environment variable (recommended)
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
@@ -38,16 +38,16 @@ def get_response(query):
         st.success(str(response) + tdt)
 ##################################################################
 st.title("Chat con Chicho")
-st.image('Allende50.jfif', width=200)
+st.image('Allende50.jfif', width=300)
 query = st.text_input("Pregúntele al Doctor Allende", "")
 
 if st.button("Pregunte"):
     if not query.strip():
-        st.error(f"Please provide the search query.")
+        st.error(f"Escriba una pregunta.")
     else:
         try:
             get_response(query)
         except Exception as e:
-            st.error(f"An error occurred: {e}")
+            st.error(f"Ocurrió un error: {e}")
             
 st.write('creado en septiembre 2023 por Sergio Lucero')
