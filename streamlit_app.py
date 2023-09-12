@@ -28,7 +28,7 @@ def get_response(query):
     else:
         dt = round(time.time()-t0,2)
         tdt = f'[DT: {dt} secs]'
-        st.success(response + tdt)
+        st.success(str(response) + tdt)
 ##################################################################
 st.title("Chat con Chicho")
 st.image('Allende50.jfif', width=200)
