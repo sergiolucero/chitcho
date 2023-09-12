@@ -1,4 +1,4 @@
 langchain
-llama-index
+llama-index==0.5.27
 openai
 streamlit
