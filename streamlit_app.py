@@ -14,10 +14,11 @@ def get_response(query):
     if os.path.exists(idx_file):
         index = GPTSimpleVectorIndex.load_from_disk(idx_file)
     else:
+        llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
         prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
         documents = SimpleDirectoryReader(dirpath).load_data()
         service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, prompt_helper=prompt_helper)
-        llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
+        
         index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
         index.save_to_disk(idx_file)
             
