@@ -57,7 +57,7 @@ def comentarios():   # send to dynamodb
                  reset()
              else:
                  st.warning('algo pasó')
-      st.write('Gracias!')
+          st.write('Gracias!')
 
 def get_response(query):
     t0 = time.time()
@@ -69,7 +69,7 @@ def get_response(query):
         dt = round(time.time()-t0,2)
         tdt = f'[DT: {dt} secs]'
         st.success(str(response))
-        comentarios()
+        #comentarios()
 ##################################################################
 st.title("Chat con el Chicho")
 col1, col2 = st.columns(2)
