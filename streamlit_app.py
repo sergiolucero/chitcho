@@ -1,5 +1,5 @@
 import os, streamlit as st
-import boto3
+import boto3  # move to awslib
 import time, datetime
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
 from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
@@ -27,10 +27,9 @@ def get_index(idx_file = 'index2.pkl'):
 
 def enviar_comentario(name, comment):
     timestamp = int(time.time())   # idealmente: now()
-    dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
+    dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('chicho-cetram')
-    table.put_item(Item={'username': name, 'timestamp': timestamp,
-                         'comments': comment})
+    table.put_item(Item={'username': name, 'timestamp': timestamp, 'comments': comment})
 
 def comentarios():   # send to dynamodb
     st.write('Comentario')
@@ -39,11 +38,9 @@ def comentarios():   # send to dynamodb
       comment = st.text_area('Comentario')
       submit_button = st.form_submit_button(label='Enviar')
       if submit_button:
-          st.write(f'Nombre: {name}')
-          st.write(f'Comentario: {comment}')
+          st.write('Nombre', name, 'Comentario', comment)
           enviar_comentario(name, comment, timestamp)
           st.write('Gracias!')
-
 
 def get_response(query):
     t0 = time.time()
