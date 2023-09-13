@@ -26,8 +26,12 @@ def get_index(idx_file = 'index2.pkl'):
     return index
 
 def enviar_comentario(name, comment, timestamp):
-    ddb = boto3.client('dynamodb')
-    
+    dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
+    table = dynamodb.Table('chicho')
+    table.put_item(Item={'nombre': name, 'fecha': timestamp,
+                         'comentario': comment})
+
+
 def comentarios():   # send to dynamodb
     timestamp = now()
     st.title('Comentario')
