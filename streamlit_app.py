@@ -8,6 +8,7 @@ os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirpath = './docs'
 #######################################
 now = datetime.datetime.now
+
 def submitted():
     st.session_state.submitted = True
 def reset():
@@ -43,6 +44,7 @@ def enviar_comentario(name, comment):
 
 
 def comentarios():   # send to dynamodb
+    reset()
     st.write('Comentarios')
     with st.form(key='comment_form'):
       name = st.text_input('Nombre')
@@ -69,7 +71,7 @@ def get_response(query):
         dt = round(time.time()-t0,2)
         tdt = f'[DT: {dt} secs]'
         st.success(str(response))
-        #comentarios()
+        comentarios()
 ##################################################################
 st.title("Chat con el Chicho")
 col1, col2 = st.columns(2)
