@@ -34,7 +34,13 @@ def enviar_comentario(name, comment):
     timestamp = int(time.time())   # idealmente: now()
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('chicho-cetram')
-    table.put_item(Item={'username': name, 'timestamp': timestamp, 'comments': comment})
+    #table.put_item(Item={'username': name, 'timestamp': timestamp, 'comments': comment})
+    table.update_item(
+        Key={'username': username},
+        UpdateExpression="set username = :g",
+        ExpressionAttributeValues={':g': timestamp, ':g': comment},
+        ReturnValues="UPDATED_NEW")
+
 
 def comentarios():   # send to dynamodb
     st.write('Comentarios')
