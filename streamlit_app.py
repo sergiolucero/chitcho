@@ -1,11 +1,13 @@
 import os, streamlit as st
-import time
+import boto3
+import time, datetime
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
 from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
 #######################################
 os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirpath = './docs'
 #######################################
+now = datetime.datetime.now
 @st.cache_resource(show_spinner=False)
 def get_index(idx_file = 'index2.pkl'):
     
@@ -22,7 +24,24 @@ def get_index(idx_file = 'index2.pkl'):
         index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
         index.save_to_disk(idx_file)
     return index
+
+def enviar_comentario(name, comment, timestamp):
+    ddb = boto3.client('dynamodb')
     
+def comentarios():   # send to dynamodb
+    timestamp = now()
+    st.title('Comentario')
+
+    with st.form(key='comment_form'):
+      name = st.text_input('Nombre')
+      comment = st.text_area('Comentario')
+      submit_button = st.form_submit_button(label='Enviar')
+      if submit_button:
+          st.info(f'Name: {name}')
+          st.info(f'Comment: {comment}')█
+          # enviar_comentario(name, comment, timestamp)
+
+
 def get_response(query):
     t0 = time.time()
     index = get_index()    
@@ -32,7 +51,8 @@ def get_response(query):
     else:
         dt = round(time.time()-t0,2)
         tdt = f'[DT: {dt} secs]'
-        st.success(str(response) + tdt)
+        st.success(str(response))
+        comentarios()
 ##################################################################
 st.title("Chat con el Chicho")
 col1, col2 = st.columns(2)
