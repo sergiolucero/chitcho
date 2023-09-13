@@ -1,5 +1,5 @@
 langchain
-llama-index==0.5.27
+llama-index # was ==0.5.27
 openai
 PyPDF2
 streamlit
