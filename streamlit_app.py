@@ -1,4 +1,4 @@
-eimport os, streamlit as st
+import os, streamlit as st
 import time
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
 from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
