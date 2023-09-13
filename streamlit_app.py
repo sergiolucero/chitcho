@@ -32,13 +32,17 @@ def enviar_comentario(name, comment):
     table.put_item(Item={'username': name, 'timestamp': timestamp, 'comments': comment})
 
 def comentarios():   # send to dynamodb
-    st.write('Comentario')
+    st.write('Comentarios')
     with st.form(key='comment_form'):
       name = st.text_input('Nombre')
       comment = st.text_area('Comentario')
       submit_button = st.form_submit_button(label='Enviar')
       if submit_button:
           st.write('Nombre', name, 'Comentario', comment)
+          if name and comment:
+              st.success('lo lograste', name, comment)
+          else:
+              st.warning('algo pasó')
           enviar_comentario(name, comment, timestamp)
           st.write('Gracias!')
 
