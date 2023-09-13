@@ -25,15 +25,14 @@ def get_index(idx_file = 'index2.pkl'):
         index.save_to_disk(idx_file)
     return index
 
-def enviar_comentario(name, comment, timestamp):
+def enviar_comentario(name, comment):
+    timestamp = int(time.time())   # idealmente: now()
     dynamodb = boto3.resource('dynamodb', region_name='us-east-2')
-    table = dynamodb.Table('chicho')
-    table.put_item(Item={'nombre': name, 'fecha': timestamp,
-                         'comentario': comment})
-
+    table = dynamodb.Table('chicho-cetram')
+    table.put_item(Item={'username': name, 'timestamp': timestamp,
+                         'comments': comment})
 
 def comentarios():   # send to dynamodb
-    timestamp = now()
     st.title('Comentario')
 
     with st.form(key='comment_form'):
@@ -43,7 +42,7 @@ def comentarios():   # send to dynamodb
       if submit_button:
           st.write(f'Nombre: {name}')
           st.write(f'Comentario: {comment}')
-          # enviar_comentario(name, comment, timestamp)
+          enviar_comentario(name, comment, timestamp)
 
 
 def get_response(query):
