@@ -51,14 +51,14 @@ def comentarios():   # send to dynamodb
       comment = st.text_area('Comentario')
       submit_button = st.form_submit_button(label='Enviar', on_click=submitted)
       if 'submitted' in st.session_state:
-         if st.session_state.submitted == True:
-             st.write('Nombre', name, 'Comentario', comment)
-             if name and comment:
-                 st.success('lo lograste', name, comment)
-                 enviar_comentario(name, comment, timestamp)
-                 reset()
-             else:
-                 st.warning('algo pasó')
+          if st.session_state.submitted == True:
+              st.write('Nombre', name, 'Comentario', comment)
+              if name and comment:
+                  st.success('lo lograste', name, comment)
+                  enviar_comentario(name, comment, timestamp)
+                  reset()
+              else:
+                  st.warning('algo pasó')
           st.write('Gracias!')
 
 def get_response(query):
