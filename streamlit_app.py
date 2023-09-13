@@ -33,8 +33,7 @@ def enviar_comentario(name, comment):
                          'comments': comment})
 
 def comentarios():   # send to dynamodb
-    st.title('Comentario')
-
+    st.write('Comentario')
     with st.form(key='comment_form'):
       name = st.text_input('Nombre')
       comment = st.text_area('Comentario')
@@ -43,6 +42,7 @@ def comentarios():   # send to dynamodb
           st.write(f'Nombre: {name}')
           st.write(f'Comentario: {comment}')
           enviar_comentario(name, comment, timestamp)
+          st.write('Gracias!')
 
 
 def get_response(query):
