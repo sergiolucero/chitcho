@@ -1,4 +1,4 @@
-import os, streamlit as st
+eimport os, streamlit as st
 import time
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
 from langchain.llms.openai import OpenAI   # could be llama_index.llms  but maybe some other version
@@ -33,17 +33,19 @@ def get_response(query):
         tdt = f'[DT: {dt} secs]'
         st.success(str(response) + tdt)
 ##################################################################
-st.title("Chat con Chicho")
-st.image('Allende50.jfif', width=300)
-query = st.text_input("Pregúntele al Doctor Allende", "")
-
-if st.button("Pregunte"):
-    if not query.strip():
-        st.error(f"Escriba una pregunta.")
-    else:
-        try:
-            get_response(query)
-        except Exception as e:
-            st.error(f"Ocurrió un error: {e}")
+st.title("Chat con el Chicho")
+col1, col2 = st.columns(2)
+with col1:
+    st.image('Allende50.jfif', width=300)
+with col2:
+    query = st.text_input("Pregúntele al Doctor Allende", "¿cuál es la importancia del cobre?")
+    if st.button("Pregunte"):
+        if not query.strip():
+            st.error(f"Escriba una pregunta.")
+        else:
+            try:
+                get_response(query)
+            except Exception as e:
+                st.error(f"Ocurrió un error: {e}")
             
 st.write('creado en septiembre 2023 por Sergio Lucero')
