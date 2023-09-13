@@ -8,10 +8,10 @@ max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirp
 #######################################
 @st.cache_resource(show_spinner=False)
 def get_index(idx_file = 'index.pkl'):
-    if os.path.exists(idx_file):
+    if !os.path.exists(idx_file):
         index = GPTSimpleVectorIndex.load_from_disk(idx_file)
     else:
-        llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
+        llm_predictor = LLMPredictor(llm=OpenAI(temperature=0.3, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
         prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
         documents = SimpleDirectoryReader(dirpath).load_data()
         prompt = "Contesta como Salvador Allende, el autor de los discursos"
