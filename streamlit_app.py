@@ -17,7 +17,7 @@ def get_index(idx_file = 'index2.pkl'):
         documents = SimpleDirectoryReader(dirpath).load_data()
         prompt = "Contesta como Salvador Allende, el autor de los discursos"
         service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, 
-                                                       prompt_helper=prompt_helper) #,system_prompt=prompt)
+                                                       prompt_helper=prompt_helper, system_prompt=prompt)
         
         index = GPTSimpleVectorIndex.from_documents(documents, service_context=service_context)
         index.save_to_disk(idx_file)
