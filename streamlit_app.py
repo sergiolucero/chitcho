@@ -8,6 +8,11 @@ os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirpath = './docs'
 #######################################
 now = datetime.datetime.now
+def submitted():
+    st.session_state.submitted = True
+def reset():
+    st.session_state.submitted = False
+
 @st.cache_resource(show_spinner=False)
 def get_index(idx_file = 'index2.pkl'):
     
@@ -36,15 +41,17 @@ def comentarios():   # send to dynamodb
     with st.form(key='comment_form'):
       name = st.text_input('Nombre')
       comment = st.text_area('Comentario')
-      submit_button = st.form_submit_button(label='Enviar')
-      if submit_button:
-          st.write('Nombre', name, 'Comentario', comment)
-          if name and comment:
-              st.success('lo lograste', name, comment)
-          else:
-              st.warning('algo pasó')
-          enviar_comentario(name, comment, timestamp)
-          st.write('Gracias!')
+      submit_button = st.form_submit_button(label='Enviar', on_click=submitted)
+      if 'submitted' in st.session_state:
+         if st.session_state.submitted == True:
+             st.write('Nombre', name, 'Comentario', comment)
+             if name and comment:
+                 st.success('lo lograste', name, comment)
+                 enviar_comentario(name, comment, timestamp)
+                 reset()
+             else:
+                 st.warning('algo pasó')
+      st.write('Gracias!')
 
 def get_response(query):
     t0 = time.time()
