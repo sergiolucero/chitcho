@@ -72,4 +72,5 @@ with col2:
             except Exception as e:
                 st.error(f"Ocurrió un error: {e}")
             
-st.write('creado en septiembre 2023 por Sergio Lucero')
+st.write('''creado en septiembre 2023 por Sergio Lucero. Fuentes: Textos de Salvador Allende (1971) de la Biblioteca Clodomiro Almeyda + ALLENDE
+            a 50 años de su elección, discursos fundamentales (de la Biblioteca del Congreso).''')
