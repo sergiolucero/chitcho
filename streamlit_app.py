@@ -7,9 +7,9 @@ os.environ['OPENAI_API_KEY']= st.secrets['OPENAI_API_KEY']
 max_input_size = 8192;     num_output = 256;     max_chunk_overlap = 20;    dirpath = './docs'
 #######################################
 @st.cache_resource(show_spinner=False)
-def get_index(idx_file = 'index.pkl'):
+def get_index(idx_file = 'index2.pkl'):
     
-    if not os.path.exists(idx_file):
+    if os.path.exists(idx_file):
         index = GPTSimpleVectorIndex.load_from_disk(idx_file)
     else:
         llm_predictor = LLMPredictor(llm=OpenAI(temperature=0.3, model_name="gpt-3.5-turbo-0613"))  # was text-davinci-003
